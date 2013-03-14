@@ -2,7 +2,6 @@ package software.component.cataloging;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JComboBox;
 
 
 /*
@@ -23,8 +22,8 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
         initComponents();
         jComboBox1.addActionListener(this); 
         jPanelDesign.setVisible(false);
-         jPanelCode.setVisible(false);
-         this.setVisible(true);
+        jPanelCode.setVisible(false);
+        this.setVisible(true);
          
          
     }
@@ -57,7 +56,7 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
         jLabel2 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTree1 = new javax.swing.JTree();
+        JComponents = new javax.swing.JTree();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -145,8 +144,6 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Code", "Design" }));
 
-        jTextField1.setText("jTextField1");
-
         jLabel2.setText("Reuse Component Category");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -161,8 +158,8 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
                 .addGap(39, 39, 39)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(566, Short.MAX_VALUE))
@@ -176,16 +173,16 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(57, 57, 57)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(327, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Search", jPanel2);
 
-        jScrollPane1.setViewportView(jTree1);
+        jScrollPane1.setViewportView(JComponents);
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -236,6 +233,7 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
 
   
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTree JComponents;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox11;
@@ -258,14 +256,12 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTree jTree1;
     // End of variables declaration//GEN-END:variables
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == jComboBox1){
         String text = jComboBox1.getModel().getSelectedItem().toString();
-                System.out.print(text);
             switch (text) {
                 case "Code":
                     jPanelDesign.setVisible(false);
