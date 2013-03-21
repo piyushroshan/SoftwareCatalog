@@ -21,11 +21,13 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
     public GUI() {
         initComponents();
         jComboBox1.addActionListener(this); 
+        jMenuItem1.addActionListener(this);
         jPanelDesign.setVisible(false);
         jPanelCode.setVisible(false);
         this.setVisible(true);
          
-         
+         AddComponent a = new AddComponent();
+            a.setVisible(true);
     }
 
     /**
@@ -46,11 +48,13 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
         jCheckBox4 = new javax.swing.JCheckBox();
+        jCheckBox5 = new javax.swing.JCheckBox();
         jPanelDesign = new javax.swing.JPanel();
         jCheckBox9 = new javax.swing.JCheckBox();
         jCheckBox10 = new javax.swing.JCheckBox();
         jCheckBox11 = new javax.swing.JCheckBox();
         jCheckBox12 = new javax.swing.JCheckBox();
+        jCheckBox6 = new javax.swing.JCheckBox();
         jComboBox1 = new javax.swing.JComboBox();
         jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -59,6 +63,7 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
         JComponents = new javax.swing.JTree();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -76,20 +81,24 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
 
         jCheckBox4.setText("C");
 
+        jCheckBox5.setText("Other");
+
         javax.swing.GroupLayout jPanelCodeLayout = new javax.swing.GroupLayout(jPanelCode);
         jPanelCode.setLayout(jPanelCodeLayout);
         jPanelCodeLayout.setHorizontalGroup(
             jPanelCodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelCodeLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(29, 29, 29)
                 .addComponent(jCheckBox1)
-                .addGap(43, 43, 43)
+                .addGap(37, 37, 37)
                 .addComponent(jCheckBox2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
+                .addGap(49, 49, 49)
                 .addComponent(jCheckBox3)
-                .addGap(58, 58, 58)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
                 .addComponent(jCheckBox4)
-                .addGap(32, 32, 32))
+                .addGap(29, 29, 29)
+                .addComponent(jCheckBox5)
+                .addGap(19, 19, 19))
         );
         jPanelCodeLayout.setVerticalGroup(
             jPanelCodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -99,7 +108,8 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
                     .addComponent(jCheckBox1)
                     .addComponent(jCheckBox2)
                     .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox4))
+                    .addComponent(jCheckBox4)
+                    .addComponent(jCheckBox5))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -113,20 +123,24 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
 
         jCheckBox12.setText("Structure");
 
+        jCheckBox6.setText("Other");
+
         javax.swing.GroupLayout jPanelDesignLayout = new javax.swing.GroupLayout(jPanelDesign);
         jPanelDesign.setLayout(jPanelDesignLayout);
         jPanelDesignLayout.setHorizontalGroup(
             jPanelDesignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelDesignLayout.createSequentialGroup()
-                .addGap(30, 30, 30)
+                .addGap(28, 28, 28)
                 .addComponent(jCheckBox9)
-                .addGap(34, 34, 34)
+                .addGap(36, 36, 36)
                 .addComponent(jCheckBox10)
-                .addGap(51, 51, 51)
+                .addGap(39, 39, 39)
                 .addComponent(jCheckBox11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGap(36, 36, 36)
                 .addComponent(jCheckBox12)
-                .addGap(29, 29, 29))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addComponent(jCheckBox6)
+                .addContainerGap())
         );
         jPanelDesignLayout.setVerticalGroup(
             jPanelDesignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,7 +150,8 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
                     .addComponent(jCheckBox10)
                     .addComponent(jCheckBox9)
                     .addComponent(jCheckBox11)
-                    .addComponent(jCheckBox12))
+                    .addComponent(jCheckBox12)
+                    .addComponent(jCheckBox6))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -160,9 +175,9 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(566, Short.MAX_VALUE))
+                .addContainerGap(486, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,10 +188,10 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(57, 57, 57)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(327, Short.MAX_VALUE))
         );
 
@@ -201,9 +216,13 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
         jTabbedPane1.addTab("Browse", jPanel3);
 
         jMenu1.setText("File");
+
+        jMenuItem1.setText("Add Component");
+        jMenu1.add(jMenuItem1);
+
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Manage");
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -238,6 +257,8 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBox4;
+    private javax.swing.JCheckBox jCheckBox5;
+    private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JCheckBox jCheckBox9;
     private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
@@ -245,6 +266,7 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -269,6 +291,13 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
                     jPanelDesign.setVisible(true);
                     break;
             }
+        }
+        if(e.getSource() == jMenuItem1)
+        {
+            AddComponent a = new AddComponent();
+            jTabbedPane1.add("Add", a);
+            jTabbedPane1.setSelectedIndex(2);
+            a.setVisible(true);
         }
        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

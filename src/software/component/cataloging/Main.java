@@ -16,6 +16,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+                
                 GUI frame= new GUI();
                 frame.setVisible(true);
     }
