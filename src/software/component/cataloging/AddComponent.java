@@ -6,13 +6,13 @@ package software.component.cataloging;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 /**
  *
  * @author R0$H4N
  */
 public class AddComponent extends javax.swing.JPanel implements ActionListener {
-
+    public String[] design = new String[] { "UML", "ERD", "DFD", "Structure", "OTHER" };
+    public String[] code = new String[] {"JAVA", "C++", ""};
     /**
      * Creates new form AddComponent
      */
@@ -143,11 +143,11 @@ public class AddComponent extends javax.swing.JPanel implements ActionListener {
         String text = jComboBox1.getModel().getSelectedItem().toString();
             switch (text) {
                 case "Code":
-                    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Java", "C++" }));
+                    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Java", "C++",  }));
                     jComboBox2.setVisible(true);
                     break;
                 case "Design":
-                    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "UML", "Structure" }));
+                    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel());
                     jComboBox2.setVisible(true);
                     break;
             }
