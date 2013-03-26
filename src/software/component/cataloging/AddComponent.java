@@ -6,19 +6,23 @@ package software.component.cataloging;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 /**
  *
  * @author R0$H4N
  */
 public class AddComponent extends javax.swing.JPanel implements ActionListener {
-    public String[] design = new String[] { "UML", "ERD", "DFD", "Structure", "OTHER" };
-    public String[] code = new String[] {"JAVA", "C++", ""};
+    private String[] code;
+    private String[] design;
     /**
      * Creates new form AddComponent
      */
-    public AddComponent() {
+    public AddComponent(String[] code, String[] design) {
         initComponents();
         jComboBox1.addActionListener(this);
+        this.code = code;
+        System.out.print(code);
+        this.design = design;
     }
 
     /**
@@ -73,6 +77,11 @@ public class AddComponent extends javax.swing.JPanel implements ActionListener {
         });
 
         jButton3.setText("Choose File");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Filename");
 
@@ -84,10 +93,10 @@ public class AddComponent extends javax.swing.JPanel implements ActionListener {
                 .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel3)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -100,10 +109,7 @@ public class AddComponent extends javax.swing.JPanel implements ActionListener {
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(56, 56, 56)
                         .addComponent(jButton3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(46, 46, 46)
-                        .addComponent(jButton2)))
+                    .addComponent(jButton2))
                 .addContainerGap(243, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -116,8 +122,8 @@ public class AddComponent extends javax.swing.JPanel implements ActionListener {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel2)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel2))
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -127,15 +133,13 @@ public class AddComponent extends javax.swing.JPanel implements ActionListener {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2))
-                        .addContainerGap(141, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel3))
+                .addGap(70, 70, 70)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
         jComboBox2.setVisible(false);
@@ -143,8 +147,14 @@ public class AddComponent extends javax.swing.JPanel implements ActionListener {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
-        remove(this);
+        
     }//GEN-LAST:event_jButton2MouseClicked
+
+private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+// TODO add your handling code here:
+    FileDialogProgram fileD = new FileDialogProgram();
+    File file = fileD.openDialog();
+}//GEN-LAST:event_jButton3ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -168,13 +178,16 @@ public class AddComponent extends javax.swing.JPanel implements ActionListener {
         String text = jComboBox1.getModel().getSelectedItem().toString();
             switch (text) {
                 case "Code":
-                    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Java", "C++",  }));
+                    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(code));
                     jComboBox2.setVisible(true);
                     break;
                 case "Design":
-                    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel());
+                    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(design));
                     jComboBox2.setVisible(true);
                     break;
+                default:
+                    jComboBox2.setModel(new javax.swing.DefaultComboBoxModel());
+                    jComboBox2.setVisible(false);
             }
         }
        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

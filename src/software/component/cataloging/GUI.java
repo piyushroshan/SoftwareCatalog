@@ -1,5 +1,6 @@
 package software.component.cataloging;
 
+import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
@@ -9,26 +10,25 @@ import javax.swing.JFrame;
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author R0$H4N
  */
 public class GUI extends javax.swing.JFrame implements ActionListener {
 
+    public String[] design = new String[]{"UML", "ERD", "DFD", "Structured", "Other"};
+    public String[] code = new String[]{"JAVA", "C++", "Python", "C", "Other"};
+
     /**
      * Creates new form NewJFrame
      */
     public GUI() {
         initComponents();
-        jComboBox1.addActionListener(this); 
+        jComboBox1.addActionListener(this);
         jMenuItem1.addActionListener(this);
         jPanelDesign.setVisible(false);
         jPanelCode.setVisible(false);
         this.setVisible(true);
-         
-         AddComponent a = new AddComponent();
-            a.setVisible(true);
     }
 
     /**
@@ -62,15 +62,16 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
         jButton4 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        JComponentTree = new javax.swing.JTree();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jComponentTree = new javax.swing.JTree();
         jPanel4 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -98,13 +99,13 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
                 .addComponent(jCheckBox1)
                 .addGap(37, 37, 37)
                 .addComponent(jCheckBox2)
-                .addGap(49, 49, 49)
+                .addGap(34, 34, 34)
                 .addComponent(jCheckBox3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
                 .addComponent(jCheckBox4)
                 .addGap(29, 29, 29)
                 .addComponent(jCheckBox5)
-                .addGap(19, 19, 19))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
         jPanelCodeLayout.setVerticalGroup(
             jPanelCodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,7 +117,7 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
                     .addComponent(jCheckBox3)
                     .addComponent(jCheckBox4)
                     .addComponent(jCheckBox5))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanelCode, "card2");
@@ -127,7 +128,7 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
 
         jCheckBox11.setText("ERD");
 
-        jCheckBox12.setText("Structure");
+        jCheckBox12.setText("Structured");
 
         jCheckBox6.setText("Other");
 
@@ -136,29 +137,29 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
         jPanelDesignLayout.setHorizontalGroup(
             jPanelDesignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelDesignLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(24, 24, 24)
                 .addComponent(jCheckBox9)
-                .addGap(36, 36, 36)
+                .addGap(27, 27, 27)
                 .addComponent(jCheckBox10)
-                .addGap(39, 39, 39)
+                .addGap(28, 28, 28)
                 .addComponent(jCheckBox11)
-                .addGap(36, 36, 36)
+                .addGap(27, 27, 27)
                 .addComponent(jCheckBox12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
                 .addComponent(jCheckBox6)
-                .addContainerGap())
+                .addGap(22, 22, 22))
         );
         jPanelDesignLayout.setVerticalGroup(
             jPanelDesignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelDesignLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(jPanelDesignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox10)
                     .addComponent(jCheckBox9)
+                    .addComponent(jCheckBox10)
                     .addComponent(jCheckBox11)
                     .addComponent(jCheckBox12)
                     .addComponent(jCheckBox6))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanelDesign, "card3");
@@ -182,29 +183,32 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(70, 70, 70)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(58, 58, 58)
+                        .addGap(59, 59, 59)
                         .addComponent(jButton4)))
-                .addContainerGap(486, Short.MAX_VALUE))
+                .addContainerGap(854, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(47, 47, 47)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4))
-                .addGap(57, 57, 57)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(663, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(108, 108, 108)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(95, 95, 95)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(568, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Search", jPanel2);
@@ -229,12 +233,31 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
         treeNode2.add(treeNode3);
         treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("ERD");
         treeNode2.add(treeNode3);
+        treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Structured");
+        treeNode2.add(treeNode3);
         treeNode3 = new javax.swing.tree.DefaultMutableTreeNode("Other");
         treeNode2.add(treeNode3);
         treeNode1.add(treeNode2);
-        JComponentTree.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
-        JComponentTree.setToolTipText("");
-        jScrollPane1.setViewportView(JComponentTree);
+        jComponentTree.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jComponentTree.setToolTipText("");
+        jScrollPane1.setViewportView(jComponentTree);
+
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable1);
+
+        jButton3.setText("Next");
+
+        jButton2.setText("Prev");
 
         jButton1.setText("View Selected");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -242,25 +265,34 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
                 jButton1MouseClicked(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Prev");
-
-        jButton3.setText("Next");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(294, 294, 294)
+                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                        .addGap(289, 289, 289)
+                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
+                        .addGap(297, 297, 297)
+                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
+                        .addGap(275, 275, 275))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1455, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 762, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -269,47 +301,32 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(374, 374, 374)
-                        .addComponent(jButton2)
-                        .addGap(77, 77, 77)
-                        .addComponent(jButton1)
-                        .addGap(93, 93, 93)
-                        .addComponent(jButton3)
-                        .addContainerGap(263, Short.MAX_VALUE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
+                .addGap(27, 27, 27)
+                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton2)
-                            .addComponent(jButton3)
-                            .addComponent(jButton1)))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 803, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 797, Short.MAX_VALUE)
                 .addContainerGap())
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Browse", jPanel3);
 
-        jMenu1.setText("File");
+        jMenu1.setText("Manage");
 
         jMenuItem1.setText("Add Component");
+        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem1MouseClicked(evt);
+            }
+        });
         jMenu1.add(jMenuItem1);
 
         jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Manage");
-        jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
 
@@ -335,21 +352,24 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-       
-        DisplayComponent d = new DisplayComponent("code");
-        jTabbedPane1.add("Display", d);
-            jTabbedPane1.setSelectedIndex(jTabbedPane1.getTabCount()-1);
-            d.setVisible(true);
-        
+        JFrame f = new JFrame();
+        f.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        f.setSize(900, 800);
+        Dimension di = new Dimension(800, 600);
+        f.setMinimumSize(di);
+        DisplayComponent d = new DisplayComponent("design");
+        //jTabbedPane1.add("Display", d);
+        //jTabbedPane1.setSelectedIndex(jTabbedPane1.getTabCount() - 1);
+        d.setVisible(true);
+        f.add(d);
+        f.setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-  
+private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
+// TODO add your handling code here:
+    
+}//GEN-LAST:event_jMenuItem1MouseClicked
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTree JComponentTree;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -365,10 +385,10 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JCheckBox jCheckBox9;
     private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JTree jComponentTree;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JPanel jPanel1;
@@ -378,14 +398,16 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
     private javax.swing.JPanel jPanelCode;
     private javax.swing.JPanel jPanelDesign;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource() == jComboBox1){
-        String text = jComboBox1.getModel().getSelectedItem().toString();
+        if (e.getSource() == jComboBox1) {
+            String text = jComboBox1.getModel().getSelectedItem().toString();
             switch (text) {
                 case "Code":
                     jPanelDesign.setVisible(false);
@@ -397,13 +419,17 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
                     break;
             }
         }
-        if(e.getSource() == jMenuItem1)
-        {
-            AddComponent a = new AddComponent();
+        if (e.getSource() == jMenuItem1) {
+            AddComponent a = new AddComponent(code, design);
             jTabbedPane1.add("Add", a);
-            jTabbedPane1.setSelectedIndex(jTabbedPane1.getTabCount()-1);
+            jTabbedPane1.setSelectedIndex(jTabbedPane1.getTabCount() - 1);
             a.setVisible(true);
         }
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        if(e.getSource() == jComponentTree){
+            
+        }
+        
+        // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
