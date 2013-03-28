@@ -2,19 +2,19 @@
 
 <Form version="1.7" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <NonVisualComponents>
-    <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
+    <Menu class="javax.swing.JMenuBar" name="manageBar">
       <SubComponents>
-        <Menu class="javax.swing.JMenu" name="jMenu1">
+        <Menu class="javax.swing.JMenu" name="addComponentMenu">
           <Properties>
             <Property name="text" type="java.lang.String" value="Manage"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="addComponentItem">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Add Component"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jMenuItem1MouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="addComponentItemMouseClicked"/>
               </Events>
             </MenuItem>
           </SubComponents>
@@ -26,7 +26,7 @@
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
   <SyntheticProperties>
-    <SyntheticProperty name="menuBar" type="java.lang.String" value="jMenuBar1"/>
+    <SyntheticProperty name="menuBar" type="java.lang.String" value="manageBar"/>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
     <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
@@ -47,7 +47,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTabbedPane1" max="32767" attributes="0"/>
+              <Component id="tabbedItems" max="32767" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -56,18 +56,18 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jTabbedPane1" min="-2" pref="846" max="-2" attributes="0"/>
+              <Component id="tabbedItems" min="-2" pref="846" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+    <Container class="javax.swing.JTabbedPane" name="tabbedItems">
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="jPanel2">
+        <Container class="javax.swing.JPanel" name="searchPanelTab">
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
               <JTabbedPaneConstraints tabName="Search">
@@ -82,20 +82,20 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel1" alignment="0" min="-2" pref="159" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="searchPanel" alignment="0" min="-2" pref="159" max="-2" attributes="0"/>
+                          <Component id="categoryLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jComboBox1" min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="typeComboBox" min="-2" pref="86" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                              <Component id="jPanel1" min="-2" pref="499" max="-2" attributes="0"/>
+                              <Component id="componentCategoriesCheckboxes" min="-2" pref="499" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Component id="jTextField1" min="-2" pref="362" max="-2" attributes="0"/>
+                              <Component id="searchTextField" min="-2" pref="362" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
-                              <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                              <Component id="searchButton" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="895" max="32767" attributes="0"/>
@@ -107,21 +107,21 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                          <Component id="jTextField1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
-                          <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="searchPanel" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="searchTextField" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                          <Component id="searchButton" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="108" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jLabel2" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
-                                  <Component id="jComboBox1" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
+                                  <Component id="categoryLabel" alignment="3" min="-2" pref="39" max="-2" attributes="0"/>
+                                  <Component id="typeComboBox" alignment="3" min="-2" pref="27" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
-                              <Component id="jPanel1" min="-2" pref="66" max="-2" attributes="0"/>
+                              <Component id="componentCategoriesCheckboxes" min="-2" pref="66" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace pref="576" max="32767" attributes="0"/>
@@ -130,12 +130,12 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="searchPanel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Search Keyword"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="jPanel1">
+            <Container class="javax.swing.JPanel" name="componentCategoriesCheckboxes">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -286,7 +286,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JComboBox" name="jComboBox1">
+            <Component class="javax.swing.JComboBox" name="typeComboBox">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                   <StringArray count="2">
@@ -296,14 +296,14 @@
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="jTextField1">
+            <Component class="javax.swing.JTextField" name="searchTextField">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="categoryLabel">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Reuse Component Category"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton4">
+            <Component class="javax.swing.JButton" name="searchButton">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Search"/>
               </Properties>
@@ -324,7 +324,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" pref="233" max="32767" attributes="0"/>
+                      <Component id="treeContainerScrollPane" pref="233" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Component id="jPanel4" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -334,7 +334,7 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jScrollPane1" max="32767" attributes="0"/>
+                      <Component id="treeContainerScrollPane" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
@@ -342,7 +342,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+            <Container class="javax.swing.JScrollPane" name="treeContainerScrollPane">
               <AuxValues>
                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
               </AuxValues>
@@ -366,28 +366,28 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="277" max="-2" attributes="0"/>
-                          <Component id="jButton2" pref="66" max="32767" attributes="0"/>
+                          <Component id="prevButton" pref="66" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="304" max="-2" attributes="0"/>
-                          <Component id="jButton1" pref="150" max="32767" attributes="0"/>
+                          <Component id="viewSelectedButton" pref="150" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="299" max="-2" attributes="0"/>
-                          <Component id="jButton3" pref="84" max="32767" attributes="0"/>
+                          <Component id="nextButton" pref="84" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="287" max="-2" attributes="0"/>
                       </Group>
-                      <Component id="jScrollPane2" alignment="1" max="32767" attributes="0"/>
-                      <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
+                      <Component id="componentTableScrollpane" alignment="1" max="32767" attributes="0"/>
+                      <Component id="itemDescriptionLabel" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <Component id="jScrollPane2" min="-2" pref="506" max="-2" attributes="0"/>
+                          <Component id="componentTableScrollpane" min="-2" pref="506" max="-2" attributes="0"/>
                           <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" pref="212" max="32767" attributes="0"/>
+                          <Component id="itemDescriptionLabel" pref="212" max="32767" attributes="0"/>
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="2"/>
-                              <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="2"/>
-                              <Component id="jButton3" alignment="3" max="32767" attributes="2"/>
+                              <Component id="prevButton" alignment="3" min="-2" max="-2" attributes="2"/>
+                              <Component id="viewSelectedButton" alignment="3" min="-2" max="-2" attributes="2"/>
+                              <Component id="nextButton" alignment="3" max="32767" attributes="2"/>
                           </Group>
                           <EmptySpace min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -395,7 +395,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+                <Container class="javax.swing.JScrollPane" name="componentTableScrollpane">
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
@@ -447,25 +447,25 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JButton" name="jButton3">
+                <Component class="javax.swing.JButton" name="nextButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Next"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton2">
+                <Component class="javax.swing.JButton" name="prevButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Prev"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton1">
+                <Component class="javax.swing.JButton" name="viewSelectedButton">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="View Selected"/>
                   </Properties>
                   <Events>
-                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jButton1MouseClicked"/>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="viewSelectedButtonMouseClicked"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel3">
+                <Component class="javax.swing.JLabel" name="itemDescriptionLabel">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Description"/>
                     <Property name="verticalAlignment" type="int" value="1"/>

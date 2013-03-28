@@ -8,22 +8,12 @@ package software.component.cataloging;
 //could just import javax.swing.* and java.awt.* etc..
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import javax.swing.JTextArea;
-import java.awt.EventQueue;
-import java.awt.BorderLayout;
-import java.awt.GridLayout;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import java.io.File;
 
 
 public class FileDialogProgram {
     
     JFrame guiFrame;
-    JTextArea tracker; 
-    JPanel optPanel;
     JFileChooser fileDialog;
     
 
