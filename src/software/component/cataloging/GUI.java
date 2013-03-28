@@ -50,17 +50,17 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
         searchPanel = new javax.swing.JLabel();
         componentCategoriesCheckboxes = new javax.swing.JPanel();
         jPanelCode = new javax.swing.JPanel();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
+        codeJavaCheckBox = new javax.swing.JCheckBox();
+        codeCPPCheckBox = new javax.swing.JCheckBox();
+        codePythonCheckBox = new javax.swing.JCheckBox();
+        codeCCheckBox = new javax.swing.JCheckBox();
+        codeOtherCheckBox = new javax.swing.JCheckBox();
         jPanelDesign = new javax.swing.JPanel();
-        jCheckBox9 = new javax.swing.JCheckBox();
-        jCheckBox10 = new javax.swing.JCheckBox();
-        jCheckBox11 = new javax.swing.JCheckBox();
-        jCheckBox12 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
+        designUMLCheckBox = new javax.swing.JCheckBox();
+        designDFDCheckBox = new javax.swing.JCheckBox();
+        designERDCheckBox = new javax.swing.JCheckBox();
+        designStructuredCheckBox = new javax.swing.JCheckBox();
+        designOtherCheckBox = new javax.swing.JCheckBox();
         typeComboBox = new javax.swing.JComboBox();
         searchTextField = new javax.swing.JTextField();
         categoryLabel = new javax.swing.JLabel();
@@ -86,15 +86,15 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
         componentCategoriesCheckboxes.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         componentCategoriesCheckboxes.setLayout(new java.awt.CardLayout());
 
-        jCheckBox1.setText("Java");
+        codeJavaCheckBox.setText("Java");
 
-        jCheckBox2.setText("C++");
+        codeCPPCheckBox.setText("C++");
 
-        jCheckBox3.setText("Python");
+        codePythonCheckBox.setText("Python");
 
-        jCheckBox4.setText("C");
+        codeCCheckBox.setText("C");
 
-        jCheckBox5.setText("Other");
+        codeOtherCheckBox.setText("Other");
 
         javax.swing.GroupLayout jPanelCodeLayout = new javax.swing.GroupLayout(jPanelCode);
         jPanelCode.setLayout(jPanelCodeLayout);
@@ -102,15 +102,15 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
             jPanelCodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelCodeLayout.createSequentialGroup()
                 .addGap(29, 29, 29)
-                .addComponent(jCheckBox1)
+                .addComponent(codeJavaCheckBox)
                 .addGap(37, 37, 37)
-                .addComponent(jCheckBox2)
+                .addComponent(codeCPPCheckBox)
                 .addGap(34, 34, 34)
-                .addComponent(jCheckBox3)
+                .addComponent(codePythonCheckBox)
                 .addGap(37, 37, 37)
-                .addComponent(jCheckBox4)
+                .addComponent(codeCCheckBox)
                 .addGap(29, 29, 29)
-                .addComponent(jCheckBox5)
+                .addComponent(codeOtherCheckBox)
                 .addContainerGap(60, Short.MAX_VALUE))
         );
         jPanelCodeLayout.setVerticalGroup(
@@ -118,25 +118,25 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
             .addGroup(jPanelCodeLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(jPanelCodeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox1)
-                    .addComponent(jCheckBox2)
-                    .addComponent(jCheckBox3)
-                    .addComponent(jCheckBox4)
-                    .addComponent(jCheckBox5))
+                    .addComponent(codeJavaCheckBox)
+                    .addComponent(codeCPPCheckBox)
+                    .addComponent(codePythonCheckBox)
+                    .addComponent(codeCCheckBox)
+                    .addComponent(codeOtherCheckBox))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
         componentCategoriesCheckboxes.add(jPanelCode, "card2");
 
-        jCheckBox9.setText("UML");
+        designUMLCheckBox.setText("UML");
 
-        jCheckBox10.setText("DFD");
+        designDFDCheckBox.setText("DFD");
 
-        jCheckBox11.setText("ERD");
+        designERDCheckBox.setText("ERD");
 
-        jCheckBox12.setText("Structured");
+        designStructuredCheckBox.setText("Structured");
 
-        jCheckBox6.setText("Other");
+        designOtherCheckBox.setText("Other");
 
         javax.swing.GroupLayout jPanelDesignLayout = new javax.swing.GroupLayout(jPanelDesign);
         jPanelDesign.setLayout(jPanelDesignLayout);
@@ -144,15 +144,15 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
             jPanelDesignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelDesignLayout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jCheckBox9)
+                .addComponent(designUMLCheckBox)
                 .addGap(27, 27, 27)
-                .addComponent(jCheckBox10)
+                .addComponent(designDFDCheckBox)
                 .addGap(28, 28, 28)
-                .addComponent(jCheckBox11)
+                .addComponent(designERDCheckBox)
                 .addGap(27, 27, 27)
-                .addComponent(jCheckBox12)
+                .addComponent(designStructuredCheckBox)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
-                .addComponent(jCheckBox6)
+                .addComponent(designOtherCheckBox)
                 .addGap(22, 22, 22))
         );
         jPanelDesignLayout.setVerticalGroup(
@@ -160,11 +160,11 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
             .addGroup(jPanelDesignLayout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(jPanelDesignLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox9)
-                    .addComponent(jCheckBox10)
-                    .addComponent(jCheckBox11)
-                    .addComponent(jCheckBox12)
-                    .addComponent(jCheckBox6))
+                    .addComponent(designUMLCheckBox)
+                    .addComponent(designDFDCheckBox)
+                    .addComponent(designERDCheckBox)
+                    .addComponent(designStructuredCheckBox)
+                    .addComponent(designOtherCheckBox))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -432,19 +432,19 @@ private void addComponentItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-
     private javax.swing.JMenuItem addComponentItem;
     private javax.swing.JMenu addComponentMenu;
     private javax.swing.JLabel categoryLabel;
+    private javax.swing.JCheckBox codeCCheckBox;
+    private javax.swing.JCheckBox codeCPPCheckBox;
+    private javax.swing.JCheckBox codeJavaCheckBox;
+    private javax.swing.JCheckBox codeOtherCheckBox;
+    private javax.swing.JCheckBox codePythonCheckBox;
     private javax.swing.JPanel componentCategoriesCheckboxes;
     private javax.swing.JScrollPane componentTableScrollpane;
+    private javax.swing.JCheckBox designDFDCheckBox;
+    private javax.swing.JCheckBox designERDCheckBox;
+    private javax.swing.JCheckBox designOtherCheckBox;
+    private javax.swing.JCheckBox designStructuredCheckBox;
+    private javax.swing.JCheckBox designUMLCheckBox;
     private javax.swing.JLabel itemDescriptionLabel;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JCheckBox jCheckBox10;
-    private javax.swing.JCheckBox jCheckBox11;
-    private javax.swing.JCheckBox jCheckBox12;
-    private javax.swing.JCheckBox jCheckBox2;
-    private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JCheckBox jCheckBox4;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox9;
     private javax.swing.JTree jComponentTree;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;

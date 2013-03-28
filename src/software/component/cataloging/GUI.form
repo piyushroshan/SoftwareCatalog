@@ -158,15 +158,15 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                              <Component id="codeJavaCheckBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
+                              <Component id="codeCPPCheckBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                              <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
+                              <Component id="codePythonCheckBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
+                              <Component id="codeCCheckBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
-                              <Component id="jCheckBox5" min="-2" max="-2" attributes="0"/>
+                              <Component id="codeOtherCheckBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="60" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -176,11 +176,11 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jCheckBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="codeJavaCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="codeCPPCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="codePythonCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="codeCCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="codeOtherCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="24" max="32767" attributes="0"/>
                           </Group>
@@ -188,27 +188,27 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+                    <Component class="javax.swing.JCheckBox" name="codeJavaCheckBox">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Java"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+                    <Component class="javax.swing.JCheckBox" name="codeCPPCheckBox">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="C++"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+                    <Component class="javax.swing.JCheckBox" name="codePythonCheckBox">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Python"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+                    <Component class="javax.swing.JCheckBox" name="codeCCheckBox">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="C"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox5">
+                    <Component class="javax.swing.JCheckBox" name="codeOtherCheckBox">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Other"/>
                       </Properties>
@@ -227,15 +227,15 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                              <Component id="jCheckBox9" min="-2" max="-2" attributes="0"/>
+                              <Component id="designUMLCheckBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="jCheckBox10" min="-2" max="-2" attributes="0"/>
+                              <Component id="designDFDCheckBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="jCheckBox11" min="-2" max="-2" attributes="0"/>
+                              <Component id="designERDCheckBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="jCheckBox12" min="-2" max="-2" attributes="0"/>
+                              <Component id="designStructuredCheckBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace pref="64" max="32767" attributes="0"/>
-                              <Component id="jCheckBox6" min="-2" max="-2" attributes="0"/>
+                              <Component id="designOtherCheckBox" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -245,11 +245,11 @@
                           <Group type="102" attributes="0">
                               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="jCheckBox9" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox11" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="jCheckBox6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="designUMLCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="designDFDCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="designERDCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="designStructuredCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="designOtherCheckBox" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace pref="24" max="32767" attributes="0"/>
                           </Group>
@@ -257,27 +257,27 @@
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox9">
+                    <Component class="javax.swing.JCheckBox" name="designUMLCheckBox">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="UML"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox10">
+                    <Component class="javax.swing.JCheckBox" name="designDFDCheckBox">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="DFD"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox11">
+                    <Component class="javax.swing.JCheckBox" name="designERDCheckBox">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="ERD"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox12">
+                    <Component class="javax.swing.JCheckBox" name="designStructuredCheckBox">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Structured"/>
                       </Properties>
                     </Component>
-                    <Component class="javax.swing.JCheckBox" name="jCheckBox6">
+                    <Component class="javax.swing.JCheckBox" name="designOtherCheckBox">
                       <Properties>
                         <Property name="text" type="java.lang.String" value="Other"/>
                       </Properties>
