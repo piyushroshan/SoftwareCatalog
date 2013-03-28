@@ -174,7 +174,7 @@ public class DisplayComponent extends javax.swing.JPanel {
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         try {
-            showContent("images/piyush.jpg", jButton2.getText());
+            showContent("images/UseCase.png", jButton2.getText());
         } catch (Exception ex) {
             Logger.getLogger(DisplayComponent.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -194,7 +194,16 @@ public class DisplayComponent extends javax.swing.JPanel {
         });
         }else if(type.equalsIgnoreCase("code"))
         {
-            
+            SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                JLabel l = new JLabel(new ImageIcon(u));
+                JScrollPane jsp = new JScrollPane(l);
+                JOptionPane.showMessageDialog(null, jsp, "Content", JOptionPane.INFORMATION_MESSAGE);
+                jPanel2.add(jsp);
+                
+            }
+            });
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
