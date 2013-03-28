@@ -4,13 +4,9 @@
  */
 package software.component.cataloging;
 
-import java.awt.Dimension;
-import java.io.File;
-import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
