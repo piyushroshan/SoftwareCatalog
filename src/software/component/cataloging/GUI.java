@@ -65,10 +65,10 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
         searchTextField = new javax.swing.JTextField();
         categoryLabel = new javax.swing.JLabel();
         searchButton = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
+        treePanel = new javax.swing.JPanel();
         treeContainerScrollPane = new javax.swing.JScrollPane();
         jComponentTree = new javax.swing.JTree();
-        jPanel4 = new javax.swing.JPanel();
+        tablePanel = new javax.swing.JPanel();
         componentTableScrollpane = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         nextButton = new javax.swing.JButton();
@@ -325,11 +325,11 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
         itemDescriptionLabel.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         itemDescriptionLabel.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout tablePanelLayout = new javax.swing.GroupLayout(tablePanel);
+        tablePanel.setLayout(tablePanelLayout);
+        tablePanelLayout.setHorizontalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(tablePanelLayout.createSequentialGroup()
                 .addGap(277, 277, 277)
                 .addComponent(prevButton, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                 .addGap(304, 304, 304)
@@ -340,40 +340,40 @@ public class GUI extends javax.swing.JFrame implements ActionListener {
             .addComponent(componentTableScrollpane, javax.swing.GroupLayout.Alignment.TRAILING)
             .addComponent(itemDescriptionLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+        tablePanelLayout.setVerticalGroup(
+            tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, tablePanelLayout.createSequentialGroup()
                 .addComponent(componentTableScrollpane, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(itemDescriptionLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
                 .addGap(42, 42, 42)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(tablePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(prevButton)
                     .addComponent(viewSelectedButton)
                     .addComponent(nextButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout treePanelLayout = new javax.swing.GroupLayout(treePanel);
+        treePanel.setLayout(treePanelLayout);
+        treePanelLayout.setHorizontalGroup(
+            treePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(treePanelLayout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(treeContainerScrollPane, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
                 .addGap(27, 27, 27)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(tablePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+        treePanelLayout.setVerticalGroup(
+            treePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, treePanelLayout.createSequentialGroup()
                 .addComponent(treeContainerScrollPane)
                 .addContainerGap())
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(tablePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        tabbedItems.addTab("Browse", jPanel3);
+        tabbedItems.addTab("Browse", treePanel);
 
         addComponentMenu.setText("Manage");
 
@@ -446,8 +446,6 @@ private void addComponentItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-
     private javax.swing.JCheckBox designUMLCheckBox;
     private javax.swing.JLabel itemDescriptionLabel;
     private javax.swing.JTree jComponentTree;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanelCode;
     private javax.swing.JPanel jPanelDesign;
     private javax.swing.JTable jTable1;
@@ -459,7 +457,9 @@ private void addComponentItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-
     private javax.swing.JPanel searchPanelTab;
     private javax.swing.JTextField searchTextField;
     private javax.swing.JTabbedPane tabbedItems;
+    private javax.swing.JPanel tablePanel;
     private javax.swing.JScrollPane treeContainerScrollPane;
+    private javax.swing.JPanel treePanel;
     private javax.swing.JComboBox typeComboBox;
     private javax.swing.JButton viewSelectedButton;
     // End of variables declaration//GEN-END:variables

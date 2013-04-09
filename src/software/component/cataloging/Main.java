@@ -16,8 +16,10 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        PurgeUnused purge = new PurgeUnused();
+        purge.start();
+        GUI frame= new GUI();
+        frame.setVisible(true);
                 
-                GUI frame= new GUI();
-                frame.setVisible(true);
     }
 }
